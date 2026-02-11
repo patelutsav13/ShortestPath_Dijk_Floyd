@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* React Flow custom styles */
+.react-flow__node {
+  cursor: pointer;
+}
+
+.react-flow__edge-path {
+  stroke-width: 2;
+}
+
+/* Map Path Neon Effects */
+.neon-blue-path {
+  filter: drop-shadow(0 0 8px rgba(0, 191, 255, 0.8)) drop-shadow(0 0 15px rgba(0, 191, 255, 0.6));
+  stroke-dasharray: 10;
+  animation: dash 30s linear infinite;
+}
+
+.neon-red-path {
+  filter: drop-shadow(0 0 8px rgba(255, 49, 49, 0.8)) drop-shadow(0 0 15px rgba(255, 49, 49, 0.6));
+  stroke-dasharray: 10;
+  animation: dash 40s linear infinite;
+}
+
+.neon-yellow-path {
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8)) drop-shadow(0 0 15px rgba(255, 215, 0, 0.6));
+  stroke-dasharray: 10;
+  animation: dash 35s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
